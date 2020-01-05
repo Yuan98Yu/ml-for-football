@@ -49,13 +49,13 @@ def main(_):
   env.reset()
   try:
     i = 0
-    while i < FLAGS.epoch:
-      observation, _, done, _ = env.step([])
-      print(observation)
+    while i < FLAGS.epoch:      
+      _, _, done, _ = env.step([])
       if done:
         env.write_dump('episodes')
         env.reset()
         i += 1
+        print("Epoch %d ends." % i)
   except KeyboardInterrupt:
     logging.warning('Game stopped, writing dump...')
     env.write_dump('shutdown')

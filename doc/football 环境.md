@@ -36,7 +36,7 @@ google-research/football 已经给出了一个默认的脚本（ play_game.py �
 3. 自定义 Observations 的输出格式和输出地址
 4. 加快比赛速度：关闭 realtime 选项，关闭比赛的可视化界面
 
-改写过程中，除 play_game.py 外，参考的资料是官方的 API 文档 [Environment API](https://github.com/google-research/football/blob/master/gfootball/doc/api.md) , [Observations](https://github.com/google-research/football/blob/master/gfootball/doc/observation.md)
+改写过程中，除 play_game.py 外，参考的资料是官方的 API 文档 [Environment API](https://github.com/google-research/football/blob/master/gfootball/doc/api.md) , [Observations](https://github.com/google-research/football/blob/master/gfootball/doc/observation.md) , [Saving  replays, logs, traces](https://github.com/google-research/football/blob/master/gfootball/doc/saving_replays.md)
 
 ## 3 运行 auto_game.py
 
@@ -46,9 +46,19 @@ google-research/football 已经给出了一个默认的脚本（ play_game.py �
 make autogame
 ```
 
-## 4 输出数据
+## 4 数据载入和分析
 
+1. dump 文件转换为便于阅读的文本文件
 
+    google-research/football 提供了一个脚本用于 dump -> txt ，我将调用其的命令写在了 /ex/makefile 中
+
+    ```bash
+    make dump2txt
+    ```
+
+2. python 程序中载入 dump 以便进一步处理
+
+    阅读 google-research/football 源码知：3 中输出的 dump 文件是使用 cpickle 库的 dump 方法将 python 对象序列化得到，因此可以使用 cpickle 的 load 方法将 dump 文件内容读出
 
 ## 5 我个人的运行环境
 
