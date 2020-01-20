@@ -1,5 +1,7 @@
-/env
 **/.vscode
 **/__pycache__
+**/.ipynb_checkpoints
+
+/env
 **/tmp
 **/dumps

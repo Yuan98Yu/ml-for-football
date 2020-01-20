@@ -35,7 +35,7 @@ def main(_):
              ), ('Player type \'agent\' can not be used with play_game.')
   cfg = config.Config({
       'action_set': FLAGS.action_set,
-      'dump_full_episodes': True,
+      'dump_full_episodes': True, #dump when done
       'players': players,
       'real_time': FLAGS.real_time,
 	  'tracesdir': FLAGS.dump_dir,
@@ -52,7 +52,6 @@ def main(_):
     while i < FLAGS.epoch:      
       _, _, done, _ = env.step([])
       if done:
-        env.write_dump('episodes')
         env.reset()
         i += 1
         print("Epoch %d ends." % i)
