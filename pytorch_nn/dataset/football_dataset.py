@@ -1,3 +1,10 @@
+# -*- encoding: utf-8 -*-
+'''
+@File    :   football_dataset.py
+@Time    :   2020/01/30 16:16:52
+@Author  :   Yuan Yu
+'''
+
 import os
 import re
 import numpy as np

@@ -1,3 +1,10 @@
+# -*- encoding: utf-8 -*-
+'''
+@File    :   football_display.py
+@Time    :   2020/01/30 16:16:59
+@Author  :   Yuan Yu
+'''
+
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 import os

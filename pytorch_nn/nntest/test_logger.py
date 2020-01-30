@@ -1,3 +1,10 @@
+# -*- encoding: utf-8 -*-
+'''
+@File    :   test_logger.py
+@Time    :   2020/01/30 16:16:11
+@Author  :   Yuan Yu
+'''
+
 from six.moves.cPickle import dump
 from os.path import join
 

@@ -1,3 +1,10 @@
+# -*- encoding: utf-8 -*-
+'''
+@File    :   basic_nn.py
+@Time    :   2020/01/30 16:16:31
+@Author  :   Yuan Yu
+'''
+
 import torch.nn as nn
 
 
